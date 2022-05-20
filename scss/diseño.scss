@@ -1,0 +1,251 @@
+//PALETA DE COLORES
+$salmon: #ffab91;
+$salmonTransparente: #ffab91ee;
+$lavanda: #bebadc;
+$lavandaTransparente: #bebadcc7;
+$blanco: #ffffff;
+$negro: #000000;
+$negroTransparente: #00000083;
+$gris: #5e5e5e;
+
+//MAP-GET
+$estilos:(
+    borde5: 5px,
+    borde10: 10px,
+    borde15: 15px,
+    borde20: 20px,
+    borde30: 30px,
+    fuente20: 20px,
+    fuente25: 25px,
+    fuente30: 30px,
+    fuente35: 35px,
+    fuente40: 40px,
+    fuente50: 50px,
+    sombra1-negro: $negro 1px 1px,
+    sombra1-gris: $gris 1px 1px,
+    sombra1-salmon: $salmon 1px 1px,
+    sombra1-lavanda: $lavanda 1px 1px,
+    sombra2-negro: $negro 2px 2px,
+    sombra2-gris: $gris 2px 2px,
+    sombra2-salmon: $salmon 2px 2px,
+    sombra2-lavanda: $lavanda 2px 2px,
+    ancho100: 100%,
+    ancho90: 90%,
+    ancho80: 80%
+);
+
+//MIXINS
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row-evenly{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+@mixin flex-column-evenly{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+@mixin flex-row-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@mixin flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@mixin imagen-fixed-center{
+    background-attachment: fixed;
+    background-position: center;
+}
+@mixin imagen-norepeat-cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin imagen-repeat-contain{
+    background-repeat: repeat;
+    background-size: contain;
+}
+//GENERAL
+*{
+    margin: 0px;
+    text-decoration: none;
+}
+.fondo{
+    background-image: url(../images/cupcakes.webp);
+    @include imagen-fixed-center;
+    @include imagen-repeat-contain;
+}
+.contenedor{
+    width: map-get($map: $estilos, $key: ancho90);
+    border-radius: map-get($map: $estilos, $key: borde20);
+    @include flex-column;
+    background-color: $salmonTransparente;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: $negroTransparente 5px 5px;
+}
+h1{
+    color: $blanco;
+    font-size: map-get($map: $estilos, $key: fuente40);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-shadow: map-get($map: $estilos, $key: sombra2-gris);
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Leckerli One', cursive;
+}
+//ENCABEZADO
+.encabezado{
+    width: map-get($map: $estilos, $key: ancho100);
+    border-bottom-left-radius: map-get($map: $estilos, $key: borde20);
+    border-bottom-right-radius: map-get($map: $estilos, $key: borde20);
+    background-color: $lavanda;
+    box-shadow: $negroTransparente 5px 5px;
+}
+.encabezado__contenido{
+    @include flex-row-evenly
+}
+.contenido__logo1{
+    width: 20%;
+    @include flex-row;
+    justify-content: left;
+}
+.contenido__logo2{
+    width: 20%;
+    @include flex-row;
+    justify-content: right;
+}
+.logo{
+    transition: 0.75s;
+    width: fit-content;
+}
+.logo:hover{
+    transform: scale(1.10)
+}
+.contenido__card{
+    @include flex-row-center
+}
+.card__links{
+    @include flex-row-evenly;
+    width: 100%;
+}
+.links__letras{
+    color: $blanco;
+    font-size: map-get($map: $estilos, $key: fuente20);
+    transition: 0.5s;
+    text-shadow: map-get($map: $estilos, $key: sombra1-gris);
+}
+.links__letras:hover{
+    transform: scale(1.10);
+    color: $salmon;
+}
+
+//FOOTER
+.footer{
+    width: map-get($map: $estilos, $key: ancho100);
+    border-top-left-radius: map-get($map: $estilos, $key: borde20);
+    border-top-right-radius: map-get($map: $estilos, $key: borde20);
+    background-color: $lavanda;
+    box-shadow: $negroTransparente 5px 0px;
+    @include flex-column;
+    align-items: center;
+}
+.footer__subtitulo{
+    color: $blanco;
+    font-size: map-get($map: $estilos, $key: fuente30);
+    margin-top: 20px;
+    text-decoration: none;
+    text-shadow: map-get($map: $estilos, $key: sombra2-gris);
+    transition: 0.5s;
+}
+.footer__subtitulo:hover{
+    color: $salmon
+}
+.footer__redes{
+    @include flex-row-evenly;
+    width: map-get($map: $estilos, $key: ancho90);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.ig{
+    transition: 0.5s;
+}
+.ig:hover{
+    transform: scale(1.10);
+}
+.wp{
+    transition: 0.5s;
+}
+.wp:hover{
+    transform: scale(1.10);
+}
+.fb{
+    transition: 0.5s;
+}
+.fb:hover{
+    transform: scale(1.10);
+}
+.logoFooter{
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Leckerli One', cursive;
+    font-size: map-get($map: $estilos, $key: fuente40);
+    text-shadow: map-get($map: $estilos, $key: sombra2-gris);
+    text-align: center;
+    color: $blanco;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.logoFooter:hover{
+    color: $salmon;
+    transform: scale(1.10)
+}
+
+//INDEX
+.tituloPrincipal{
+    font-size: map-get($map: $estilos, $key: fuente50)
+}
+#imagen{
+    @include flex-column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(../images/rosas.jpg);
+    @include imagen-fixed-center;
+    background-size: cover;
+    background-clip: content-box;
+    min-height: 350px;
+    border-radius: map-get($map: $estilos, $key: borde10);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+.banda{
+    background-color: $negroTransparente;
+    @include flex-column;
+    width: 750px;
+    border-bottom-left-radius: map-get($map: $estilos, $key: borde10);
+    border-top-left-radius: map-get($map: $estilos, $key: borde10);
+}
+.subtitulo{
+    color: $blanco;
+    font-size: map-get($map: $estilos, $key: fuente35);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+.descripcion{
+    color: $blanco;
+    font-size: map-get($map: $estilos, $key: fuente20);
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
