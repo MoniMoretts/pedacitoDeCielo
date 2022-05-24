@@ -287,7 +287,8 @@ p {
   text-shadow: #5e5e5e 1px 1px; }
 
 .carrusel {
-  width: 40%; }
+  width: 40%;
+  margin-bottom: 20px; }
 
 .textocolor {
   color: white;
