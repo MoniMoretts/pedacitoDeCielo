@@ -1,6 +1,9 @@
 * {
   margin: 0px;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Leckerli One', cursive;
+  font-family: 'Playfair Display', serif; }
 
 .fondo {
   background-image: url(../images/cupcakes.webp);
@@ -28,6 +31,14 @@ h1 {
   text-shadow: #5e5e5e 2px 2px;
   font-family: 'Dosis', sans-serif;
   font-family: 'Leckerli One', cursive; }
+
+h5 {
+  font-size: 30px;
+  color: #5e5e5e; }
+
+p {
+  font-size: 20px;
+  color: #5e5e5e; }
 
 .encabezado {
   width: 100%;
@@ -150,7 +161,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: right;
   background-image: url(../images/rosas.jpg);
   background-attachment: fixed;
   background-position: center;
@@ -163,22 +174,121 @@ h1 {
   margin-bottom: 40px; }
 
 .banda {
-  background-color: #00000083;
   display: flex;
   flex-direction: column;
-  width: 750px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px; }
+  align-items: center;
+  width: 100%; }
 
 .subtitulo {
   color: #ffffff;
   font-size: 35px;
   margin-top: 20px;
   margin-bottom: 10px;
-  padding-left: 40px; }
+  padding-left: 40px;
+  text-shadow: #5e5e5e 2px 2px; }
 
 .descripcion {
   color: #ffffff;
   font-size: 20px;
   margin-bottom: 20px;
-  padding-left: 40px; }
+  padding-left: 40px;
+  text-shadow: #5e5e5e 1px 1px; }
+
+.botonIndex {
+  width: fit-content;
+  background-color: transparent;
+  border-color: #ffab91;
+  border-width: 3px; }
+
+.botonIndex:hover {
+  background-color: #ffab91;
+  border-color: #ffffff; }
+
+.botonIndex__texto {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: #5e5e5e 1px 1px; }
+
+.botonIndex__texto:hover {
+  color: #ffffff; }
+
+.acordeon {
+  margin-bottom: 20px;
+  border-radius: 10px; }
+
+.acordeon__fondo {
+  background-color: #bebadc;
+  margin-bottom: 5px; }
+
+.acordeon__titulo {
+  background-color: #bebadc;
+  color: #ffffff;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Leckerli One', cursive;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  text-shadow: #5e5e5e 1px 1px; }
+
+.card__productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  color: #000000;
+  margin-bottom: 20px;
+  border-radius: 10px; }
+
+.card__imagen {
+  width: 30%;
+  margin: 10px; }
+
+.imagen {
+  border-radius: 5px; }
+
+.card__texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.card__boton {
+  background-color: #ffab91;
+  border-color: #ffffff;
+  border-width: 3px;
+  color: #ffffff;
+  font-size: 20px; }
+
+.card__boton:hover {
+  background-color: #bebadc;
+  border-color: #ffffff;
+  color: #ffffff; }
+
+.card__nosotros {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  border-style: none;
+  margin-bottom: 20px; }
+
+.nosotros__imagen {
+  width: 30%; }
+
+.ns__img {
+  border-radius: 10px; }
+
+.nosotros__texto {
+  width: 70%;
+  background-color: #bebadcc7;
+  border-radius: 10px;
+  margin-left: 10px; }
+
+.ns__txt {
+  color: #ffffff;
+  font-size: 25px;
+  text-shadow: #5e5e5e 1px 1px; }
+
+.carrusel {
+  width: 40%; }
+
+.textocolor {
+  color: white;
+  text-shadow: #5e5e5e 1px 1px; }
