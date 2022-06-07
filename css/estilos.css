@@ -10,7 +10,8 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
-  background-size: contain; }
+  background-size: contain;
+  overflow-x: hidden; }
 
 .contenedor {
   width: 90%;
@@ -56,6 +57,20 @@ p {
   background-color: #bebadc;
   box-shadow: #00000083 5px 5px; }
 
+.encabezado2 {
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #bebadc;
+  box-shadow: #00000083 5px 5px;
+  display: none; }
+
+.subencabezado {
+  background-color: #bebadc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
 .encabezado__contenido {
   display: flex;
   flex-direction: row;
@@ -100,6 +115,11 @@ p {
 .links__letras:hover {
   transform: scale(1.1);
   color: #ffab91; }
+
+.boton-nav {
+  background-image: url(../images/menu.png);
+  background-position: center;
+  background-size: cover; }
 
 .footer {
   width: 100%;
@@ -242,7 +262,7 @@ p {
   color: #bebadc; }
 
 .acordeon {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 10px; }
 
 .acordeon__fondo {
@@ -268,8 +288,8 @@ p {
   border-radius: 10px; }
 
 .card__imagen {
-  width: 30%;
-  margin: 10px; }
+  margin: 10px;
+  width: 35%; }
 
 .imagen {
   border-radius: 5px; }
@@ -284,7 +304,8 @@ p {
   border-color: #ffffff;
   border-width: 3px;
   color: #ffffff;
-  font-size: 20px; }
+  font-size: 20px;
+  width: 880px; }
 
 .card__boton:hover {
   background-color: #bebadc;
@@ -396,3 +417,68 @@ p {
 .contacto__ubicacion {
   border-radius: 10px;
   margin-bottom: 30px; }
+
+@media (max-width: 1300px) {
+  .card__productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  .card__boton {
+    width: 100%; } }
+
+@media (max-width: 991px) {
+  .encabezado {
+    display: none; }
+  .encabezado2 {
+    display: flex; }
+  .card__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  .links__letras {
+    margin-bottom: 20px; }
+  .contenedor {
+    width: 100%; }
+  .card__nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  .nosotros__imagen {
+    width: 60%; }
+  .ns__img {
+    margin-bottom: 20px; }
+  .nosotros__texto {
+    width: 90%;
+    margin-left: 0; }
+  .ns__txt {
+    margin-bottom: 20px; }
+  .card__productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  .card__boton {
+    width: 100%; } }
+
+@media (max-width: 760px) {
+  .experiencias__imagenes {
+    display: none; }
+  .carrusel {
+    width: 90%; }
+  .section__contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%; }
+  .contacto__redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px; }
+  .redes__texto {
+    display: none; }
+  .card__imagen {
+    width: 60%; } }

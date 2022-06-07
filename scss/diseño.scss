@@ -93,6 +93,7 @@ $estilos:(
     background-image: url(../images/cupcakes.webp);
     @include imagen-fixed-center;
     @include imagen-repeat-contain;
+    overflow-x: hidden;
 }
 .contenedor{
     width: map-get($map: $estilos, $key: ancho90);
@@ -139,6 +140,18 @@ p{
     background-color: $lavanda;
     box-shadow: $negroTransparente 5px 5px;
 }
+.encabezado2{
+    width: map-get($map: $estilos, $key: ancho100);
+    border-bottom-left-radius: map-get($map: $estilos, $key: borde20);
+    border-bottom-right-radius: map-get($map: $estilos, $key: borde20);
+    background-color: $lavanda;
+    box-shadow: $negroTransparente 5px 5px;
+    display: none;
+}
+.subencabezado{
+    background-color: $lavanda;
+    @include flex-column-evenly
+}
 .encabezado__contenido{
     @include flex-row-evenly
 }
@@ -175,6 +188,11 @@ p{
 .links__letras:hover{
     transform: scale(1.10);
     color: $salmon;
+}
+.boton-nav{
+    background-image: url(../images/menu.png);
+    background-position: center;
+    background-size: cover;
 }
 
 //FOOTER
@@ -317,7 +335,7 @@ p{
 
 //PRODUCTOS
 .acordeon{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: 10px;
 }
 .acordeon__fondo{
@@ -341,8 +359,8 @@ p{
     border-radius: 10px;
 }
 .card__imagen{
-    width: 30%;
     margin: 10px;
+    width: 35%;
 }
 .imagen{
     border-radius: 5px;
@@ -357,6 +375,7 @@ p{
     border-width: 3px;
     color: $blanco;
     font-size: 20px;
+    width: 880px;
 }
 .card__boton:hover{
     background-color: $lavanda;
@@ -462,4 +481,80 @@ p{
 .contacto__ubicacion{
     border-radius: 10px;
     margin-bottom: 30px;
+}
+
+//MEDIA QUERYS
+@media (max-width:1300px){
+    .card__productos{
+        @include flex-column-evenly;
+        align-items: center;
+    }
+    .card__boton{
+        width: 100%;
+    }
+}
+@media (max-width:991px){
+    .encabezado{
+        display: none;
+    }
+    .encabezado2{
+        display: flex;
+    }
+    .card__links{
+        @include flex-column-evenly;
+        align-items: center;
+    }
+    .links__letras{
+        margin-bottom: 20px;
+    }
+    .contenedor{
+        width: 100%;
+    }
+    .card__nosotros{
+        @include flex-column-evenly;
+        align-items: center;
+    }
+    .nosotros__imagen{
+        width: 60%;
+    }
+    .ns__img{
+        margin-bottom: 20px;
+
+    }
+    .nosotros__texto{
+        width: 90%;
+        margin-left: 0;
+    }
+    .ns__txt{
+        margin-bottom: 20px;
+    }
+    .card__productos{
+        @include flex-column-evenly;
+        align-items: center;
+    }
+    .card__boton{
+        width: 100%;
+    }
+}
+@media (max-width:760px){
+    .experiencias__imagenes{
+        display: none;
+    }
+    .carrusel{
+        width: 90%;
+    }
+    .section__contacto{
+        @include flex-column-evenly;
+        height: 100%;
+    }
+    .contacto__redes{
+        @include flex-row-evenly;
+        margin-bottom: 20px;
+    }
+    .redes__texto{
+        display: none;
+    }
+    .card__imagen{
+        width: 60%;
+    }
 }
